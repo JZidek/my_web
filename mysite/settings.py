@@ -31,10 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'crispy_forms',
-    'calculator',
-    'pokus',
-    'moviebook',
     'WebTest',
     'alco',
     'django.contrib.admin',
