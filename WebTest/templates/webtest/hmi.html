@@ -1,0 +1,37 @@
+{% extends "baseWT.html" %}
+{% load staticfiles %}
+{% block content %}
+
+    <header>
+        <h1>HMI / SCADA</h1>
+        <h3><p>
+            Zde mohu nabídnout práci s komponenty od těchto výrobců:
+            <ul>
+                <li>Siemens</li>
+                <li>Weintek</li>
+                <li>Moravské přístroje</li>
+            </ul>
+            <ul><u>Vývojové prostředí:</u>
+                <li>ProTool</li>
+                <li>WinCC Flexible 2008</li>
+                <li>TIA portal V12</li>
+                <li>TIA portal V13</li>
+                <li>TIA portal V14</li>
+                <li>TIA portal V15</li>
+                <li>TIA portal V16</li>
+                <li>Easy Builder Pro</li>
+                <li>Control Web (SCADA)</li>
+            </ul>
+
+        </p></h3>
+    </header>
+    <section>     
+        <table class="test" align="center">
+            <tbody class="test">
+                <tr class="test">
+                    <td><img src={% static s %} alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

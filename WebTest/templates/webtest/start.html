@@ -1,0 +1,41 @@
+{% extends "baseWT.html" %}
+{% load staticfiles %}
+{% block content %}
+    <header>
+        <h1>Úvod</h1></br>
+        <h3><p>
+            Nabízené činnosti v rámci průmyslové automatizace:</br>
+            <ul>
+                <li>konzultace</li></br>
+                <li>úpravy PLC kódu</li></br>
+                <li>úpravy vizualizací</li></br>
+                <li>sběr a zpracování dat z PLC</li>
+            </ul>          
+        </p></h3>
+    </header>
+    <section>     
+        <h1>Vítejte na tomto pracovním webu</h1>
+        <h2>Naleznete zde nabídku služeb spojených s automatizací průmyslových strojů.</h2>
+        </br></br>
+        <table class="main" align="center">
+            <tr class="main">
+                <td><img src={% static 'webtest/S7_300.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/S7_400.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/S7_1200.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/S7_1500.jpg' %} alt=""></td>
+            </tr>
+            <tr class="main">
+                <td><img src={% static 'webtest/HMI1.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/HMI2.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/HMI3.jpg' %} alt=""></td>
+                <td><img src={% static 'webtest/HMI4.jpg' %} alt=""></td>
+            </tr>
+            <tr class="main">
+                <td colspan="4"><img src={% static 'webtest/sberDat.jpg' %} alt=""></td>
+            </tr>
+        </table>
+    </section>
+
+    
+
+{% endblock %}

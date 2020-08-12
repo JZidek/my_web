@@ -1,0 +1,16 @@
+{% extends "baseWT.html" %}
+{% block content %}
+    <header>
+        <h1>Bar grafy</h1>
+    </header>
+    <section>   
+        <h1>Bar graf</h1>
+        {{div|safe}}
+        <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
+        <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.1.min.js"></script>  
+        <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.1.1.min.js"></script>
+        <script type="text/javascript" href='https://cdn.bokeh.org/bokeh/release/bokeh-api-2.1.1.min.js'></script>
+        {{script|safe}}
+    </section>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Alkohol</title>
+    </head>
+
+    <body>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                <p>
+                    Nazev:<input type="text" name="nazev" value={{request.POST.nazev}}>
+                    Min sleva:<input type="number" name="sleva" value={{request.POST.sleva}}>
+                    Max cena:<input type="number" name="cena" value={{request.POST.cena}}>
+                    <input type="submit">
+                </p>
+            </form>
+        </div>
+        
+        <table align="center">
+            <thead>
+                <tr>           
+                    {% for i in head %}
+                        <th ><h2>{{i}}</h2></th>       
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>  
+                {% for i in data %}  
+                    <tr >                               
+                    {% for j in i %}
+                        <td>{{j}}</td> 
+                    {% endfor %}          
+                    </tr>
+                {% endfor %}                  
+            </tbody>
+        </table>
+
+    </body>
+</html>

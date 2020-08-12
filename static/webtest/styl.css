@@ -1,0 +1,81 @@
+h1{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 1.7em;
+}
+body{
+    background-color: #3b3b3b;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li{
+    float: left;
+    padding: 0% 5%;
+}
+nav ul li:hover, .aktivni {
+    background: #c48f00;
+    box-shadow: 0% 0% 0% black;
+    margin: 0% 0%;
+}
+nav a{
+    color: skyblue;
+    font-size: 1.0;
+    text-decoration: none;
+    
+}
+article header{
+    background-color: rgb(199, 187, 154);
+    padding: 2% 2%;
+    float: left; 
+    width: 25%; 
+    height: 100%;
+    margin: 1% 1% 1% 1%;
+}
+
+article{
+    width: 100%;
+    background-color: rgb(199, 187, 154);
+    border-width: 5%;
+    border-color: darkblue;
+    margin: 0.5% 0.5%;
+    float: left;
+}
+section{
+    width: 64%;
+    min-height: 800px;
+    background-color: rgb(207, 207, 207);
+    border-width: 2%;
+    border-color: darkblue;
+    box-shadow: 3px 3px 7px rgb(94, 94, 94);
+    margin: 2% 1%;
+    float: left;
+    padding: 0.5% 0.5%;
+}
+section h1, h2{
+    text-align: center;
+}
+
+section td, tr, th{
+    border: 1px solid #363636;
+    text-align: center;
+    padding: 2px 2px;
+}
+section table, thead, tbody{
+    border: 3px solid #363636;
+    border-style: double;
+    border-collapse: collapse;
+}
+section thead{
+ background-color: #415daa;
+}
+section tbody{
+    background-color: #6c7dac;
+   }
+header a{
+    text-decoration: none;
+}
+.kontakt{
+    height: 800px;
+}

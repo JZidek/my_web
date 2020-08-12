@@ -1,0 +1,28 @@
+{% extends "baseWT.html" %}
+{% block content %}
+    <header>
+        <h1>Tabulky</h1>
+    </header>
+    <section>     
+        <h1>Tabulka hodnot linkového grafu</h1>
+        <table align="center">
+            <thead>
+                <tr>           
+                    {% for i in head %}
+                        <th ><h2>{{i}}</h2></th>       
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>  
+                {% for i in data %}  
+                    <tr >                               
+                    {% for j in i %}
+                        <td>{{j}}</td> 
+                    {% endfor %}          
+                    </tr>
+                {% endfor %}                  
+            </tbody>
+        </table>
+    </section>
+{% endblock %}
+

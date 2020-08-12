@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" type="text/css" href="{% static '/webtest/styl.css' %}" >
+        <link rel="stylesheet" type="text/css" href='https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js'/>
+        <link rel="stylesheet" type="text/css" href='https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.1.min.js'/>
+        <link rel="stylesheet" type="text/css" href='https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.1.1.min.js'/>
+        <link rel="stylesheet" type="text/css" href='https://cdn.bokeh.org/bokeh/release/bokeh-api-2.1.1.min.js'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+    </head>
+    <body>
+        
+        <header>
+            <nav>
+                <ul>
+                    <li><a href={% url "start" %}><h1>Úvod</h1></a></li>
+                    <li><a href={% url "plc" %}><h1>PLC</h1></a></li>
+                    <li><a href={% url "hmi" %}><h1>HMI / SCADA</h1></a></li>
+                    <li><a href={% url "data" %}><h1>DATA</h1></a></li>
+                    <li><a href={% url "kontakt" %}><h1>O mně / kontakt</h1></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article>
+            {% block content %}
+            
+                
+
+
+            {% endblock %}
+
+        
+        </article>
+    </body>
+</html>

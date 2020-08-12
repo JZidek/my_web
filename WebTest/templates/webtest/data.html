@@ -1,0 +1,80 @@
+{% extends "baseWT.html" %}
+{% block content %}
+    <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
+    <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.1.1.min.js"></script>  
+    <script text="type/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.1.1.min.js"></script>
+    <script type="text/javascript" href='https://cdn.bokeh.org/bokeh/release/bokeh-api-2.1.1.min.js'></script>
+    <header>
+        <h1>DATA</h1>
+        <h3><p>
+            Z PLC Siemens jsem schopen sbírat vyspecifikovaná data ohledně stavu stroje, alarmů a mnoha dalších užitečných informací, které je možno následně uložit a dále s nimi pracovat.</p>
+            <p>S daty se dá pracovat a vizualizovat je buď prostřednictvím desktopové aplikace, nebo webového prohlížeče. Desktopovou i webovou aplikaci je možno připravit na míru potřebám zákazníka.
+        </p></h3>
+    </header>
+    <section>
+        <h1>Čárový graf (zpracování pro webovou aplikaci)</h1>  
+        <table>               
+            <tr>
+                <th>
+                    <table>
+                        <thead>
+                            <tr>           
+                                {% for i in head %}
+                                    <th ><h4>{{i}}</h4></th>       
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>  
+                            {% for i in data %}  
+                                <tr >                               
+                                {% for j in i %}
+                                    <td>{{j}}</td> 
+                                {% endfor %}          
+                                </tr>
+                            {% endfor %}                  
+                        </tbody>
+                    </table>
+                </th>
+                <th>
+                    {{div|safe}}
+                    {{script|safe}}
+                    {{div1|safe}}
+                    {{script1|safe}}  
+                </th>
+            </tr> 
+        </table>
+        </br>
+        <h1>Sloupcový graf (zpracování pro webovou aplikaci)</h1>
+        <table>
+            <tr>
+                <th>
+                    <table>
+                        <thead>
+                            <tr>           
+                                {% for i in head_bar %}
+                                    <th ><h4>{{i}}</h4></th>       
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>  
+                            {% for i in data_bar %}  
+                                <tr >                               
+                                {% for j in i %}
+                                    <td>{{j}}</td> 
+                                {% endfor %}          
+                                </tr>
+                            {% endfor %}                  
+                        </tbody>
+                    </table>
+
+                </th>
+                <th>
+                    {{div_bar|safe}}
+                    {{script_bar|safe}}
+                </th>
+            </tr>
+        </table>
+        </br>
+    </section>
+{% endblock %}
+
